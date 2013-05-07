@@ -1,0 +1,6 @@
+.idea/
+target/
+*.iml
+
+*.py[cod]
+__pycache__

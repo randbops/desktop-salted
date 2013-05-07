@@ -1,0 +1,8 @@
+file_client: local
+
+file_roots:
+  base:
+    - /home/blin/.salt
+
+#state_verbose: False
+state_output: terse

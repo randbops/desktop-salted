@@ -1,0 +1,55 @@
+#!/bin/zsh
+
+PATH="$PATH:/home/blin/bin"
+
+zstyle ':prompt:grml:left:setup' items rc path vcs percent
+
+WORDCHARS=""
+
+export TERM=xterm-256color
+
+keychain id_rsa &> /dev/null
+source "$HOME/.keychain/$(uname -n)-sh"
+
+#Pacman
+alias pacs='sudo pacman -S'
+alias pacsi='pacman -Si'
+alias pacsyu='sudo pacman -Syu'
+alias pacqi='pacman -Qi'
+alias pacql='pacman -Ql'
+alias pacr='sudo pacman -Rscn'
+
+#ssh
+alias f4oe='ssh 188.134.22.40'
+alias vas56='ssh vas56.g01.i-free.ru'
+alias vas63='ssh vas63.g01.i-free.ru'
+alias vas64='ssh vas64.g01.i-free.ru'
+alias vas64y='ssh vas64y.g01.i-free.ru'
+alias vas68='ssh vas68.g01.i-free.ru'
+alias mas01='ssh mas01.t02.i-free.ru'
+alias mas03='ssh mas03.t02.i-free.ru'
+
+#postgres
+alias psql13='psql -h db13.g01.i-free.ru postgres'
+alias psql13z='psql -h db13.g01.i-free.ru zabbix'
+alias psql16='psql -h db16.g01.i-free.ru postgres'
+alias psql16on='psql -h db16.g01.i-free.ru mon_msg_sync'
+alias psql16off='psql -h db16.g01.i-free.ru mon_msg_sync_archive'
+alias psql16ze='psql -h db16.g01.i-free.ru zabbix_external'
+alias psql16i='psql -h db16.g01.i-free.ru zabbix_instructions'
+
+#cd
+alias cdm='cd ~/source/java/monitoring-mercurial/'
+alias cdmzc='cd ~/source/java/monitoring-mercurial/zabbix_checks'
+alias cdmsvn='cd ~/source/monitoring/'
+alias cdpuppetroot='cd ~/source/puppet/production/'
+alias cdpuppetmodules='cd ~/source/puppet/production/modules_root/public/'
+alias cdpuppetmonitoring='cd ~/source/puppet/production/modules_root/monitoring/'
+alias cdpuppetmanifests='cd ~/source/puppet/production/manifests_root/'
+
+
+alias lists-sync='rsync -Phai ~/misk/lists/ f4oe.org:htdocs/lists'
+
+function lists-edit(){
+    vim ~/misk/lists/$1/$2
+}

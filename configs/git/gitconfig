@@ -1,0 +1,15 @@
+[user]
+	email = blin@f4oe.org
+	name = Evgeniy Petrov
+[push]
+	default = simple
+[alias]
+    lg = log --oneline
+    st = status
+    ci = commit
+[core]
+	excludesfile = /home/blin/.gitignore
+[color]
+  diff = auto
+  status = auto
+  branch = auto
