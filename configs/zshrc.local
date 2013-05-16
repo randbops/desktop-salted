@@ -39,9 +39,9 @@ alias psql16ze='psql -h db16.g01.i-free.ru zabbix_external'
 alias psql16i='psql -h db16.g01.i-free.ru zabbix_instructions'
 
 #cd
-alias cdm='cd ~/source/java/monitoring-mercurial/'
-alias cdmzc='cd ~/source/java/monitoring-mercurial/zabbix_checks'
-alias cdmsvn='cd ~/source/monitoring/'
+alias cdm='cd ~/source/ifree/java/monitoring'
+alias cdmzc='cd ~/source/ifree/java/monitoring/zabbix_checks'
+
 alias cdpuppetroot='cd ~/source/puppet/production/'
 alias cdpuppetmodules='cd ~/source/puppet/production/modules_root/public/'
 alias cdpuppetmonitoring='cd ~/source/puppet/production/modules_root/monitoring/'
@@ -49,7 +49,3 @@ alias cdpuppetmanifests='cd ~/source/puppet/production/manifests_root/'
 
 
 alias lists-sync='rsync -Phai ~/misk/lists/ f4oe.org:htdocs/lists'
-
-function lists-edit(){
-    vim ~/misk/lists/$1/$2
-}
