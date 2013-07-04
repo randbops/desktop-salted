@@ -2,14 +2,10 @@
   close_button_on_tab = False
   inactive_color_offset = 0.6
   borderless = True
-[keybindings]
-  next_tab = <Alt>Tab
-  prev_tab = <Shift><Alt>Tab
 [profiles]
   [[default]]
     scrollbar_position = hidden
     use_system_font = False
-    font = Terminus 8
     cursor_blink = False
     show_titlebar = False
 [layouts]

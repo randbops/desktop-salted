@@ -1,37 +1,45 @@
 console-packages:
     pkg.installed:
         - pkgs:
-            - gvim
+            - lm-sensors
+            - feh
+            - curl
+            - postgresql-client
+            - maven
+            - realpath
+            - openjdk-7-jdk
+            - ranger
             - pwgen
             - wget
             - mercurial
-            - openssh
             - rsync
-            - alsa-utils
+            - subversion
             - git
+            - tree
             - mpd
             - mpc
             - ncmpcpp
-            - tree
-            - python
-            - python2
-            - jre7-openjdk-headless
-            - keychain
-
+            - htop
+            - scala
+            - leiningen
+#            - python
+#            - python2
+#            - gvim
+#            - keychain
+#            - openssh
+#            - alsa-utils
+#
 graphical-packages:
     pkg.installed:
         - order: last
         - pkgs:
-            - xorg-server
-            - xorg-server-utils
-            - xorg-xinit
-            - wireshark-gtk
-            - dmenu
-            - chromium
+            - chromium-browser
             - firefox
             - thunderbird
             - pidgin
-            - terminus-font
+#            - wireshark-gtk
+#            - dmenu
+#            - terminus-font
             
 sudo:
     pkg:
@@ -42,22 +50,20 @@ sudo:
         - user: root
         - mode: 400
 
-ntp:
-    pkg:
-        - installed
-    service:
-        - name: ntpd
-        - enable: True
-        - running
+#ntp:
+#    pkg:
+#        - installed
+#    service:
+#        - name: ntpd
+#        - enable: True
+#        - running
 
 zsh:
     pkg.installed
-grml-zsh-config:
-    pkg.installed
 /home/blin/.zshrc:
-    file.symlink:
-        - require: [pkg: grml-zsh-config, user: blin]
-        - target: /etc/zsh/zshrc
+    file.managed:
+        - require: [user: blin]
+        - source: salt://configs/zshrc
 /home/blin/.zshrc.local:
     file.managed:
         - require: [user: blin]
@@ -65,15 +71,10 @@ grml-zsh-config:
 
 blin:
     user.present:
-        - require: [pkg: zsh]
-        - shell: /bin/zsh
         - home: /home/blin
+        - shell: /bin/zsh
         - groups:
-            - wheel
             - adm
-            - power
-            - systemd-journal
-            - uucp
 
 terminator:
     pkg:
@@ -105,11 +106,3 @@ terminator:
     file.managed:
         - require: [user: blin]
         - source: salt://configs/vimrc
-
-openbox:
-    pkg.installed:
-        - name: openbox-multihead-git
-/home/blin/.config/openbox/rc.xml:
-    file.managed:
-        - require: [user: blin, pkg: openbox]
-        - source: salt://configs/openbox-rc.xml

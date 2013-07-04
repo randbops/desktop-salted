@@ -8,9 +8,6 @@ WORDCHARS=""
 
 export TERM=xterm-256color
 
-keychain id_rsa &> /dev/null
-source "$HOME/.keychain/$(uname -n)-sh"
-
 #Pacman
 alias pacs='sudo pacman -S'
 alias pacsi='pacman -Si'
@@ -42,10 +39,13 @@ alias psql16i='psql -h db16.g01.i-free.ru zabbix_instructions'
 alias cdm='cd ~/source/ifree/java/monitoring'
 alias cdmzc='cd ~/source/ifree/java/monitoring/zabbix_checks'
 
-alias cdpuppetroot='cd ~/source/puppet/production/'
-alias cdpuppetmodules='cd ~/source/puppet/production/modules_root/public/'
-alias cdpuppetmonitoring='cd ~/source/puppet/production/modules_root/monitoring/'
-alias cdpuppetmanifests='cd ~/source/puppet/production/manifests_root/'
+alias cdpr='cd ~/source/puppet/production/'
+alias cdpmod='cd ~/source/puppet/production/modules_root/public/'
+alias cdpmon='cd ~/source/puppet/production/modules_root/monitoring/'
+alias cdpmond='cd ~/source/puppet/production/modules_root/monitoring/daemon'
+alias cdpman='cd ~/source/puppet/production/manifests_root/'
 
 
 alias lists-sync='rsync -Phai ~/misk/lists/ f4oe.org:htdocs/lists'
+
+disable -a ag
