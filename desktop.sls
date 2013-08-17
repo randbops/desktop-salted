@@ -75,6 +75,7 @@ blin:
         - shell: /bin/zsh
         - groups:
             - adm
+            - dialout
 
 terminator:
     pkg:

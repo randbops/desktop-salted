@@ -43,6 +43,7 @@ alias cdpr='cd ~/source/puppet/production/'
 alias cdpmod='cd ~/source/puppet/production/modules_root/public/'
 alias cdpmon='cd ~/source/puppet/production/modules_root/monitoring/'
 alias cdpmond='cd ~/source/puppet/production/modules_root/monitoring/daemon'
+alias cdpmondt='cd ~/source/puppet/production/modules_root/monitoring/daemon/templates'
 alias cdpman='cd ~/source/puppet/production/manifests_root/'
 
 
