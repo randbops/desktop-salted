@@ -1,8 +1,6 @@
 [user]
 	email = blin@f4oe.org
 	name = Evgeniy Petrov
-[push]
-	default = simple
 [alias]
     lg = log --oneline
     st = status

@@ -1,6 +1,7 @@
 console-packages:
     pkg.installed:
         - pkgs:
+            - sudo
             - lm-sensors
             - feh
             - curl
@@ -22,33 +23,16 @@ console-packages:
             - htop
             - scala
             - leiningen
-#            - python
-#            - python2
-#            - gvim
-#            - keychain
-#            - openssh
-#            - alsa-utils
 #
-graphical-packages:
-    pkg.installed:
-        - order: last
-        - pkgs:
-            - chromium-browser
-            - firefox
-            - thunderbird
-            - pidgin
+#graphical-packages:
+#    pkg.installed:
+#        - order: last
+#        - pkgs:
+#            - chromium-browser
+#            - firefox
+#            - thunderbird
+#            - pidgin
 #            - wireshark-gtk
-#            - dmenu
-#            - terminus-font
-            
-sudo:
-    pkg:
-        - installed
-    file.managed:
-        - name: /etc/sudoers
-        - source: salt://configs/sudoers
-        - user: root
-        - mode: 400
 
 #ntp:
 #    pkg:
@@ -74,6 +58,7 @@ blin:
         - home: /home/blin
         - shell: /bin/zsh
         - groups:
+            - sudo
             - adm
             - dialout
 
