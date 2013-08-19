@@ -1,14 +1,14 @@
 console-packages:
     pkg.installed:
         - pkgs:
+            - ntp
+            - silversearcher-ag
             - sudo
             - lm-sensors
             - feh
             - curl
             - postgresql-client
-            - maven
             - realpath
-            - openjdk-7-jdk
             - ranger
             - pwgen
             - wget
@@ -21,26 +21,40 @@ console-packages:
             - mpc
             - ncmpcpp
             - htop
+            - devscripts
+
+java-packages:
+    pkg.installed:
+        - pkgs:
+            - openjdk-6-jdk
+            - openjdk-6-source
+            - openjdk-7-jdk
+            - openjdk-7-source
             - scala
             - leiningen
-#
-#graphical-packages:
-#    pkg.installed:
-#        - order: last
-#        - pkgs:
-#            - chromium-browser
-#            - firefox
-#            - thunderbird
-#            - pidgin
-#            - wireshark-gtk
+            - maven
 
-#ntp:
-#    pkg:
-#        - installed
-#    service:
-#        - name: ntpd
-#        - enable: True
-#        - running
+python-packages:
+    pkg.installed:
+        - pkgs:
+            - python2.6
+            - python2.7
+            - python3.2
+            - python3.3
+            - virtualenvwrapper
+            - python-tox
+            - python-nose
+            - python-mock
+            - python3-nose
+            - python3-mock
+
+graphical-packages:
+    pkg.installed:
+        - order: last
+        - pkgs:
+            - chromium
+            - pidgin
+            - wireshark
 
 zsh:
     pkg.installed
