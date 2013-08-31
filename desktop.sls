@@ -22,6 +22,10 @@ console-packages:
             - ncmpcpp
             - htop
             - devscripts
+            - ruby
+            - graphviz
+            - mc
+            - vim-gtk
 
 java-packages:
     pkg.installed:
@@ -42,6 +46,8 @@ python-packages:
             - python3.2
             - python3.3
             - virtualenvwrapper
+            - fabric
+            - python-mutagen
             - python-tox
             - python-nose
             - python-mock
