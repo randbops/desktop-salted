@@ -26,6 +26,9 @@ console-packages:
             - graphviz
             - mc
             - vim-gtk
+            - tcpdump
+            - exuberant-ctags
+            - smbclient
 
 java-packages:
     pkg.installed:
@@ -89,15 +92,6 @@ terminator:
         - name: /home/blin/.config/terminator/config
         - require: [user: blin]
         - source: salt://configs/terminator
-
-/home/blin/.hgrc:
-    file.managed:
-        - require: [user: blin]
-        - source: salt://configs/hg/hgrc
-/home/blin/.hgignore:
-    file.managed:
-        - require: [user: blin]
-        - source: salt://configs/hg/hgignore
 
 /home/blin/.gitconfig:
     file.managed:

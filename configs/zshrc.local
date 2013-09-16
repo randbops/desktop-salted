@@ -11,24 +11,6 @@ WORDCHARS=""
 
 export TERM=xterm-256color
 
-#Pacman
-alias pacs='sudo pacman -S'
-alias pacsi='pacman -Si'
-alias pacsyu='sudo pacman -Syu'
-alias pacqi='pacman -Qi'
-alias pacql='pacman -Ql'
-alias pacr='sudo pacman -Rscn'
-
-#ssh
-alias f4oe='ssh 188.134.22.40'
-alias vas56='ssh vas56.g01.i-free.ru'
-alias vas63='ssh vas63.g01.i-free.ru'
-alias vas64='ssh vas64.g01.i-free.ru'
-alias vas64y='ssh vas64y.g01.i-free.ru'
-alias vas68='ssh vas68.g01.i-free.ru'
-alias mas01='ssh mas01.t02.i-free.ru'
-alias mas03='ssh mas03.t02.i-free.ru'
-
 #postgres
 alias psql13='psql -h db13.g01.i-free.ru postgres'
 alias psql13z='psql -h db13.g01.i-free.ru zabbix'
@@ -51,5 +33,7 @@ alias cdpman='cd ~/source/puppet/production/manifests_root/'
 
 
 alias lists-sync='rsync -Phai ~/misk/lists/ f4oe.org:htdocs/lists'
+
+alias em='emacsclient -n'
 
 disable -a ag
