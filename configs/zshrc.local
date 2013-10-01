@@ -3,7 +3,6 @@
 PATH="$PATH:/home/blin/bin"
 
 source /etc/bash_completion.d/virtualenvwrapper
-source /home/blin/.rvm/scripts/rvm
 
 zstyle ':prompt:grml:left:setup' items rc path vcs percent
 

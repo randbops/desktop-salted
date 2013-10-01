@@ -29,6 +29,8 @@ console-packages:
             - tcpdump
             - exuberant-ctags
             - smbclient
+            - enca
+            - recode
 
 java-packages:
     pkg.installed:
@@ -106,3 +108,9 @@ terminator:
     file.managed:
         - require: [user: blin]
         - source: salt://configs/vimrc
+
+/home/blin/.emacs.d:
+    file.recurse:
+        - require: [user: blin]
+        - user: blin
+        - source: salt://configs/emacs.d
