@@ -4,5 +4,6 @@
 (require 'functions)
 (require 'keybindings)
 (require 'options)
+(require 'python-stuff)
 
 (server-start)

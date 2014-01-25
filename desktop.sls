@@ -31,6 +31,7 @@ console-packages:
             - smbclient
             - enca
             - recode
+            - xfonts-terminus
 
 java-packages:
     pkg.installed:
@@ -46,10 +47,10 @@ java-packages:
 python-packages:
     pkg.installed:
         - pkgs:
-            - python2.6
             - python2.7
-            - python3.2
-            - python3.3
+            - python2.7-dbg
+            - python3
+            - python3-dbg
             - virtualenvwrapper
             - fabric
             - python-mutagen
@@ -66,6 +67,7 @@ graphical-packages:
             - chromium
             - pidgin
             - wireshark
+            - emacs24
 
 zsh:
     pkg.installed

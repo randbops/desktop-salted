@@ -12,7 +12,11 @@
                       starter-kit-eshell
                       clojure-mode
                       clojure-test-mode
-                      nrepl))
+                      nrepl
+                      yaml-mode
+                      puppet-mode
+                      auto-complete
+                      virtualenv))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

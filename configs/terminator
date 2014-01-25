@@ -5,15 +5,7 @@
 [profiles]
   [[default]]
     scrollbar_position = hidden
-    use_system_font = False
     cursor_blink = False
     show_titlebar = False
-[layouts]
-  [[default]]
-    [[[child1]]]
-      type = Terminal
-      parent = window0
-    [[[window0]]]
-      type = Window
-      parent = ""
-[plugins]
+    use_system_font = False
+    font = Terminus 12
