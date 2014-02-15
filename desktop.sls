@@ -2,7 +2,6 @@ console-packages:
     pkg.installed:
         - pkgs:
             - ntp
-            - silversearcher-ag
             - sudo
             - lm-sensors
             - feh
@@ -17,7 +16,6 @@ console-packages:
             - subversion
             - git
             - tree
-            - mpd
             - mpc
             - ncmpcpp
             - htop
@@ -36,12 +34,8 @@ console-packages:
 java-packages:
     pkg.installed:
         - pkgs:
-            - openjdk-6-jdk
-            - openjdk-6-source
             - openjdk-7-jdk
             - openjdk-7-source
-            - scala
-            - leiningen
             - maven
 
 python-packages:
@@ -52,22 +46,16 @@ python-packages:
             - python3
             - python3-dbg
             - virtualenvwrapper
-            - fabric
             - python-mutagen
-            - python-tox
-            - python-nose
-            - python-mock
-            - python3-nose
-            - python3-mock
 
 graphical-packages:
     pkg.installed:
         - order: last
         - pkgs:
-            - chromium
             - pidgin
             - wireshark
-            - emacs24
+            - network-manager-openvpn
+            - virtualbox
 
 zsh:
     pkg.installed
@@ -97,6 +85,18 @@ terminator:
         - require: [user: blin]
         - source: salt://configs/terminator
 
+mpd:
+    pkg:
+        - installed
+/home/blin/.mpdconf:
+    file.managed:
+        - require: [user: blin]
+        - source: salt://configs/mpdconf
+/home/blin/.config/autostart/mpd.desktop:
+    file.managed:
+        - require: [user: blin]
+        - source: salt://configs/mpd-autostart
+
 /home/blin/.gitconfig:
     file.managed:
         - require: [user: blin]
@@ -110,9 +110,3 @@ terminator:
     file.managed:
         - require: [user: blin]
         - source: salt://configs/vimrc
-
-/home/blin/.emacs.d:
-    file.recurse:
-        - require: [user: blin]
-        - user: blin
-        - source: salt://configs/emacs.d
