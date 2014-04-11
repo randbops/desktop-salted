@@ -5,11 +5,11 @@
   lg = log --oneline
   st = status
   ci = commit
+  d  = diff -M -C -D
+  dc = diff --cached -M -C -D
 [core]
   excludesfile = /home/blin/.gitignore
 [color]
   diff = auto
   status = auto
   branch = auto
-[push]
-  default = simple

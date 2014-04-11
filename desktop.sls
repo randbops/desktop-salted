@@ -12,6 +12,7 @@ console-packages:
             - pwgen
             - wget
             - mercurial
+            - git-svn
             - rsync
             - subversion
             - git
@@ -30,6 +31,17 @@ console-packages:
             - enca
             - recode
             - xfonts-terminus
+            - ack-grep
+            - cowsay
+            - unrar
+            - moc
+            - ffmpeg
+            - imagemagick
+
+libs:
+    pkg.installed:
+        - pkgs:
+            - libpq-dev
 
 java-packages:
     pkg.installed:
@@ -43,10 +55,15 @@ python-packages:
         - pkgs:
             - python2.7
             - python2.7-dbg
+            - python2.7-dev
+            - python2.7-tk
             - python3
             - python3-dbg
+            - python3-dev
+            - python3-tk
             - virtualenvwrapper
             - python-mutagen
+            - pyflakes
 
 graphical-packages:
     pkg.installed:
@@ -110,3 +127,8 @@ mpd:
     file.managed:
         - require: [user: blin]
         - source: salt://configs/vimrc
+
+/home/blin/.pylintrc:
+    file.managed:
+        - require: [user: blin]
+        - source: salt://configs/pylintrc

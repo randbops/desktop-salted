@@ -1,6 +1,7 @@
 #!/bin/zsh
 
-PATH="$PATH:/home/blin/bin"
+PYENV_ROOT="$HOME/.pyenv"
+PATH="$PYENV_ROOT/bin:$PATH:/home/blin/bin"
 NAME='Evgeniy Petrov'
 EMAIL='blin@i-free.com'
 
@@ -11,34 +12,6 @@ zstyle ':prompt:grml:left:setup' items rc path vcs percent
 WORDCHARS=""
 
 export TERM=xterm-256color
-
-#postgres
-alias psql13='psql -h db13.g01.i-free.ru postgres'
-alias psql13z='psql -h db13.g01.i-free.ru zabbix'
-alias psql16='psql -h db16.g01.i-free.ru postgres'
-alias psql16on='psql -h db16.g01.i-free.ru mon_msg_sync'
-alias psql16off='psql -h db16.g01.i-free.ru mon_msg_sync_archive'
-alias psql16ze='psql -h db16.g01.i-free.ru zabbix_external'
-alias psql16i='psql -h db16.g01.i-free.ru zabbix_instructions'
-
-#cd
-alias cdm='cd ~/source/ifree/java/monitoring'
-alias cdmzc='cd ~/source/ifree/java/monitoring/zabbix_checks'
-
-alias cdpr='cd ~/source/puppet/production/'
-alias cdpmod='cd ~/source/puppet/production/modules_root/public/'
-alias cdpmon='cd ~/source/puppet/production/modules_root/monitoring/'
-alias cdpmonz='cd ~/source/puppet/production/modules_root/monitoring/zabby/'
-alias cdpmonzf='cd ~/source/puppet/production/modules_root/monitoring/zabby/files/'
-alias cdpmonzm='cd ~/source/puppet/production/modules_root/monitoring/zabby/manifests/'
-alias cdpmond='cd ~/source/puppet/production/modules_root/monitoring/daemon'
-alias cdpmondt='cd ~/source/puppet/production/modules_root/monitoring/daemon/templates'
-alias cdpman='cd ~/source/puppet/production/manifests_root/'
-
-
-alias lists-sync='rsync -Phai ~/misk/lists/ f4oe.org:htdocs/lists'
-
-alias em='emacsclient -n'
 
 disable -a ag
 
