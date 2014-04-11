@@ -5,7 +5,7 @@ PATH="$PYENV_ROOT/bin:$PATH:/home/blin/bin"
 NAME='Evgeniy Petrov'
 EMAIL='blin@i-free.com'
 
-source /etc/bash_completion.d/virtualenvwrapper
+eval "$(pyenv init -)"
 
 zstyle ':prompt:grml:left:setup' items rc path vcs percent
 
@@ -14,5 +14,3 @@ WORDCHARS=""
 export TERM=xterm-256color
 
 disable -a ag
-
-workon py3

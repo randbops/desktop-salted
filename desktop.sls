@@ -42,6 +42,11 @@ libs:
     pkg.installed:
         - pkgs:
             - libpq-dev
+            - libssl-dev
+            - zlib1g-dev
+            - libbz2-dev
+            - libreadline-dev
+            - libsqlite3-dev
 
 java-packages:
     pkg.installed:
