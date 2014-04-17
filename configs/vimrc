@@ -40,7 +40,7 @@ colorscheme railscasts
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
-let g:syntastic_python_checkers=['pylint']
+let g:syntastic_python_checkers=['pylint', 'pep8']
 let g:syntastic_go_checkers=['go', 'gofmt']
 
 let g:jedi#popup_on_dot = 0

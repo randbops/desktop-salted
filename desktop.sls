@@ -66,9 +66,7 @@ python-packages:
             - python3-dbg
             - python3-dev
             - python3-tk
-            - virtualenvwrapper
             - python-mutagen
-            - pyflakes
 
 graphical-packages:
     pkg.installed:
