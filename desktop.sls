@@ -31,12 +31,12 @@ console-packages:
             - enca
             - recode
             - xfonts-terminus
-            - ack-grep
+            - silversearcher-ag
             - cowsay
             - unrar
             - moc
-            - ffmpeg
             - imagemagick
+            - mplayer2
 
 libs:
     pkg.installed:
@@ -47,6 +47,7 @@ libs:
             - libbz2-dev
             - libreadline-dev
             - libsqlite3-dev
+            - tk-dev
 
 java-packages:
     pkg.installed:
@@ -76,6 +77,7 @@ graphical-packages:
             - wireshark
             - network-manager-openvpn
             - virtualbox
+            - mnemosyne
 
 zsh:
     pkg.installed
@@ -93,9 +95,15 @@ blin:
         - home: /home/blin
         - shell: /bin/zsh
         - groups:
+            - blin
             - sudo
             - adm
             - dialout
+            - cdrom
+            - dip
+            - plugdev
+            - lpadmin
+            - sambashare
 
 terminator:
     pkg:
