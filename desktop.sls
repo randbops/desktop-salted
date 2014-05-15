@@ -37,17 +37,32 @@ console-packages:
             - moc
             - imagemagick
             - mplayer2
+            - traceroute
+            - sloccount
 
 libs:
     pkg.installed:
         - pkgs:
-            - libpq-dev
+# building python
             - libssl-dev
             - zlib1g-dev
             - libbz2-dev
             - libreadline-dev
             - libsqlite3-dev
             - tk-dev
+
+# building psycopg
+            - libpq-dev
+
+# building pillow
+            - libtiff4-dev
+            - libjpeg8-dev
+            - zlib1g-dev
+            - libfreetype6-dev
+            - liblcms2-dev
+            - libwebp-dev
+            - tcl8.5-dev
+            - tk8.5-dev
 
 java-packages:
     pkg.installed:
